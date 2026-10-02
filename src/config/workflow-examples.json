@@ -1,0 +1,354 @@
+{
+  "authorization-extraction": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare authorization extraction for fictional example 29-1.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to authorization extraction. Attach real approved sources separately."
+      },
+      "id": "authorization-extraction-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare authorization extraction for fictional example 29-2.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to authorization extraction. Attach real approved sources separately."
+      },
+      "id": "authorization-extraction-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare authorization extraction for fictional example 29-3.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to authorization extraction. Attach real approved sources separately."
+      },
+      "id": "authorization-extraction-3"
+    }
+  ],
+  "csr-and-order-comparison": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare csr and order comparison for fictional example 29-1.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to csr and order comparison. Attach real approved sources separately."
+      },
+      "id": "csr-and-order-comparison-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare csr and order comparison for fictional example 29-2.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to csr and order comparison. Attach real approved sources separately."
+      },
+      "id": "csr-and-order-comparison-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare csr and order comparison for fictional example 29-3.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to csr and order comparison. Attach real approved sources separately."
+      },
+      "id": "csr-and-order-comparison-3"
+    }
+  ],
+  "carrier-rejection-classification": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare carrier rejection classification for fictional example 29-1.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to carrier rejection classification. Attach real approved sources separately."
+      },
+      "id": "carrier-rejection-classification-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare carrier rejection classification for fictional example 29-2.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to carrier rejection classification. Attach real approved sources separately."
+      },
+      "id": "carrier-rejection-classification-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare carrier rejection classification for fictional example 29-3.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to carrier rejection classification. Attach real approved sources separately."
+      },
+      "id": "carrier-rejection-classification-3"
+    }
+  ],
+  "resubmission-preparation": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare resubmission preparation for fictional example 29-1.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to resubmission preparation. Attach real approved sources separately."
+      },
+      "id": "resubmission-preparation-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare resubmission preparation for fictional example 29-2.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to resubmission preparation. Attach real approved sources separately."
+      },
+      "id": "resubmission-preparation-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare resubmission preparation for fictional example 29-3.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to resubmission preparation. Attach real approved sources separately."
+      },
+      "id": "resubmission-preparation-3"
+    }
+  ],
+  "activation-checklist-draft": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare activation checklist draft for fictional example 29-1.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to activation checklist draft. Attach real approved sources separately."
+      },
+      "id": "activation-checklist-draft-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare activation checklist draft for fictional example 29-2.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to activation checklist draft. Attach real approved sources separately."
+      },
+      "id": "activation-checklist-draft-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare activation checklist draft for fictional example 29-3.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to activation checklist draft. Attach real approved sources separately."
+      },
+      "id": "activation-checklist-draft-3"
+    }
+  ],
+  "customer-status-update-draft": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare customer status update draft for fictional example 29-1.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to customer status update draft. Attach real approved sources separately."
+      },
+      "id": "customer-status-update-draft-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare customer status update draft for fictional example 29-2.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to customer status update draft. Attach real approved sources separately."
+      },
+      "id": "customer-status-update-draft-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare customer status update draft for fictional example 29-3.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to customer status update draft. Attach real approved sources separately."
+      },
+      "id": "customer-status-update-draft-3"
+    }
+  ],
+  "evidence-completeness-review": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare evidence completeness review for fictional example 29-1.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to evidence completeness review. Attach real approved sources separately."
+      },
+      "id": "evidence-completeness-review-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare evidence completeness review for fictional example 29-2.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to evidence completeness review. Attach real approved sources separately."
+      },
+      "id": "evidence-completeness-review-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare evidence completeness review for fictional example 29-3.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to evidence completeness review. Attach real approved sources separately."
+      },
+      "id": "evidence-completeness-review-3"
+    }
+  ],
+  "operations-handoff-draft": [
+    {
+      "label": "Routine review",
+      "values": {
+        "objective": "Prepare operations handoff draft for fictional example 29-1.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Records are internally consistent; identify remaining evidence and responsible reviewers.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to operations handoff draft. Attach real approved sources separately."
+      },
+      "id": "operations-handoff-draft-1"
+    },
+    {
+      "label": "Missing evidence",
+      "values": {
+        "objective": "Prepare operations handoff draft for fictional example 29-2.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "A required source is absent and one date is inconsistent; describe gaps without filling factual blanks.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to operations handoff draft. Attach real approved sources separately."
+      },
+      "id": "operations-handoff-draft-2"
+    },
+    {
+      "label": "Complex exception",
+      "values": {
+        "objective": "Prepare operations handoff draft for fictional example 29-3.",
+        "sourceContext": "Fictional training scenario for VoIP providers, MVNOs and telecom resellers. Manage letters of authorization, customer-service records, carrier rejections, confirmed port dates and completion receipts. Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "applicableRules": "Use only the reviewed RuleVersion and source artifacts selected in this workspace; jurisdiction-specific requirements have not been established by this example.",
+        "knownDiscrepancies": "Two source versions conflict and a deadline is approaching; separate established facts, disputed details and follow-up actions.",
+        "constraints": "Draft for human review. Do not send, submit, certify, authorize payments or infer missing facts.",
+        "requestedOutput": "A concise summary, source-linked findings, missing items, owners and recommended next steps.",
+        "optionalReviewerNotes": "Example reviewer: Jordan Lee. Explicitly identify any unresolved interpretation.",
+        "optionalAdditionalEvidence": "Optional example material: dated operational notes, source receipts and prior review comments relevant to operations handoff draft. Attach real approved sources separately."
+      },
+      "id": "operations-handoff-draft-3"
+    }
+  ]
+}

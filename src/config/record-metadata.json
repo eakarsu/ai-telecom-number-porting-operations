@@ -1,0 +1,605 @@
+{
+  "PortingOrder": {
+    "name": "PortingOrder",
+    "fields": [
+      {
+        "name": "name",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "orderNumber",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "customerReference",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "gainingCarrier",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "losingCarrier",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "requestedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      }
+    ]
+  },
+  "PortingNumber": {
+    "name": "PortingNumber",
+    "fields": [
+      {
+        "name": "name",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "telephoneNumber",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "numberType",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "serviceAddress",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "accountReference",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "portingOrderId",
+        "kind": "string",
+        "required": true,
+        "relation": "PortingOrder"
+      }
+    ],
+    "parent": {
+      "entity": "PortingOrder",
+      "field": "portingOrderId"
+    }
+  },
+  "AuthorizationLetter": {
+    "name": "AuthorizationLetter",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "signedBy",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "signedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "customerName",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "scope",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "evidence",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "portingOrderId",
+        "kind": "string",
+        "required": true,
+        "relation": "PortingOrder"
+      }
+    ],
+    "parent": {
+      "entity": "PortingOrder",
+      "field": "portingOrderId"
+    }
+  },
+  "CustomerServiceRecord": {
+    "name": "CustomerServiceRecord",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "carrier",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "accountNumber",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "billingName",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "serviceAddress",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "extractedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "portingOrderId",
+        "kind": "string",
+        "required": true,
+        "relation": "PortingOrder"
+      }
+    ],
+    "parent": {
+      "entity": "PortingOrder",
+      "field": "portingOrderId"
+    }
+  },
+  "CarrierSubmission": {
+    "name": "CarrierSubmission",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "submittedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "carrier",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "requestReference",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "payloadReference",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "receipt",
+        "kind": "string",
+        "required": false
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "portingOrderId",
+        "kind": "string",
+        "required": true,
+        "relation": "PortingOrder"
+      }
+    ],
+    "parent": {
+      "entity": "PortingOrder",
+      "field": "portingOrderId"
+    }
+  },
+  "CarrierRejection": {
+    "name": "CarrierRejection",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "carrierSubmissionId",
+        "kind": "string",
+        "required": true,
+        "relation": "CarrierSubmission"
+      },
+      {
+        "name": "receivedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "rejectionCode",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "reason",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "responseDueAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "portingOrderId",
+        "kind": "string",
+        "required": true,
+        "relation": "PortingOrder"
+      }
+    ],
+    "parent": {
+      "entity": "PortingOrder",
+      "field": "portingOrderId"
+    }
+  },
+  "FirmOrderCommitment": {
+    "name": "FirmOrderCommitment",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "confirmedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "activationAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "carrier",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "confirmationReference",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "timezone",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "portingOrderId",
+        "kind": "string",
+        "required": true,
+        "relation": "PortingOrder"
+      }
+    ],
+    "parent": {
+      "entity": "PortingOrder",
+      "field": "portingOrderId"
+    }
+  },
+  "PortActivation": {
+    "name": "PortActivation",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "portingNumberId",
+        "kind": "string",
+        "required": true,
+        "relation": "PortingNumber"
+      },
+      {
+        "name": "activatedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "routingEvidence",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "serviceTest",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "receipt",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "portingOrderId",
+        "kind": "string",
+        "required": true,
+        "relation": "PortingOrder"
+      }
+    ],
+    "parent": {
+      "entity": "PortingOrder",
+      "field": "portingOrderId"
+    }
+  },
+  "PortingException": {
+    "name": "PortingException",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "portingNumberId",
+        "kind": "string",
+        "required": true,
+        "relation": "PortingNumber"
+      },
+      {
+        "name": "observedAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "issue",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "owner",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "action",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "dueAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "portingOrderId",
+        "kind": "string",
+        "required": true,
+        "relation": "PortingOrder"
+      }
+    ],
+    "parent": {
+      "entity": "PortingOrder",
+      "field": "portingOrderId"
+    }
+  },
+  "OperationalTask": {
+    "name": "OperationalTask",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "owner",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "priority",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "startAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "dueAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "done",
+        "kind": "boolean",
+        "required": true
+      },
+      {
+        "name": "notes",
+        "kind": "string",
+        "required": false
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "portingOrderId",
+        "kind": "string",
+        "required": true,
+        "relation": "PortingOrder"
+      }
+    ],
+    "parent": {
+      "entity": "PortingOrder",
+      "field": "portingOrderId"
+    }
+  },
+  "RuleVersion": {
+    "name": "RuleVersion",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "jurisdiction",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "version",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "effectiveAt",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "expiresAt",
+        "kind": "date",
+        "required": false
+      },
+      {
+        "name": "sourceUrl",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "requirementText",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "portingOrderId",
+        "kind": "string",
+        "required": true,
+        "relation": "PortingOrder"
+      }
+    ],
+    "parent": {
+      "entity": "PortingOrder",
+      "field": "portingOrderId"
+    }
+  },
+  "DocumentRequirement": {
+    "name": "DocumentRequirement",
+    "fields": [
+      {
+        "name": "title",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "category",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "requiredBy",
+        "kind": "date",
+        "required": true
+      },
+      {
+        "name": "sourceReference",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "evidenceReference",
+        "kind": "string",
+        "required": false
+      },
+      {
+        "name": "reviewNotes",
+        "kind": "string",
+        "required": false
+      },
+      {
+        "name": "status",
+        "kind": "string",
+        "required": true
+      },
+      {
+        "name": "portingOrderId",
+        "kind": "string",
+        "required": true,
+        "relation": "PortingOrder"
+      }
+    ],
+    "parent": {
+      "entity": "PortingOrder",
+      "field": "portingOrderId"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "domain-calculation",
+    "title": "Porting number batch validation",
+    "operation": "numbers",
+    "example": {
+      "numbers": [
+        "+12125550101",
+        "+12125550102",
+        "+12125550101",
+        "2125550103"
+      ]
+    },
+    "description": "Identify E.164 format errors and duplicate numbers before carrier submission; ownership and portability are not inferred."
+  },
+  {
+    "id": "evidence-check",
+    "operation": "evidence",
+    "title": "Porting Order evidence checklist",
+    "description": "Check source presence against an explicitly supplied document list; reviewer assesses adequacy.",
+    "example": {
+      "requirements": [
+        {
+          "id": "source-1",
+          "requirement": "Porting Number evidence",
+          "evidence": "Example source reference"
+        },
+        {
+          "id": "source-2",
+          "requirement": "Reviewed rule version",
+          "evidence": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": "deadline-check",
+    "operation": "deadlines",
+    "title": "Operational deadline queue",
+    "description": "Compute overdue items from entered dates and completed flags; no external notifications.",
+    "example": {
+      "asOf": "2026-10-20T12:00:00Z",
+      "items": [
+        {
+          "id": "review-1",
+          "dueAt": "2026-10-18T00:00:00Z",
+          "completed": false
+        },
+        {
+          "id": "follow-up-1",
+          "dueAt": "2026-10-23T00:00:00Z",
+          "completed": false
+        }
+      ]
+    }
+  }
+]

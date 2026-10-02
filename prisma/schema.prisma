@@ -1,0 +1,359 @@
+// Generated schema — modeled after beautyhqio conventions.
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  active       Boolean @default(true)
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String
+  passwordHash String
+  role         Role     @default(ANALYST)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+enum Role {
+  ADMIN
+  MANAGER
+  ANALYST
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  actorId   String?
+  actorName String?
+  action    String
+  entity    String
+  entityId  String?
+  detail    String?
+  createdAt DateTime @default(now())
+}
+
+model WorkflowAnalysis {
+ id String @id @default(cuid())
+ actorId String
+ workflow String
+ subjectEntity String
+ subjectId String
+ input Json
+ evidence Json
+ evidenceHash String
+ result Json
+ model String
+ receipt String?
+ createdAt DateTime @default(now())
+ @@index([workflow, createdAt])
+}
+model RecordReview {
+ id String @id @default(cuid())
+ actorId String
+ entity String
+ entityId String
+ version String
+ reason String
+ createdAt DateTime @default(now())
+ @@unique([entity, entityId, version, actorId])
+}
+model UsageBucket {
+ id String @id
+ calls Int
+}
+model IssuedCredential {
+ token String @id
+ entity String
+ entityId String
+ version String
+ assertion Json
+ createdAt DateTime @default(now())
+ revokedAt DateTime?
+ @@index([entity, entityId, createdAt])
+}
+
+model DomainArtifact {
+ id String @id @default(cuid())
+ subjectEntity String
+ subjectId String
+ title String
+ content String
+ contentHash String
+ actorId String
+ approvedBy String?
+ createdAt DateTime @default(now())
+ @@index([subjectEntity, subjectId])
+}
+
+model RecordApproval {
+ id String @id
+ version String
+}
+model DomainExecution {
+ id String @id
+ actorId String
+ connectorId String
+ action String
+ subjectEntity String
+ subjectId String
+ version String
+ status String
+ result Json?
+ createdAt DateTime @default(now())
+}
+
+model WorkSession {
+ id String @id @default(cuid())
+ actorId String
+ respondentId String
+ subjectEntity String
+ subjectId String
+ questions Json
+ answers Json
+ currentQuestion String?
+ status String
+ deadline DateTime
+ createdAt DateTime @default(now())
+ @@index([respondentId, createdAt])
+}
+model SessionMedia {
+ id String @id @default(cuid())
+ sessionId String
+ questionId String
+ actorId String
+ contentType String
+ bytes Bytes
+ contentHash String
+ createdAt DateTime @default(now())
+ @@index([sessionId])
+}
+
+model AppSetting {
+ id String @id
+ value Json
+ updatedAt DateTime @updatedAt
+}
+
+model PortingOrder {
+ id String @id @default(cuid())
+ name String
+ orderNumber String
+ customerReference String
+ gainingCarrier String
+ losingCarrier String
+ requestedAt DateTime
+ status String @default("Draft")
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ inversePortingNumber_portingOrderId PortingNumber[] @relation("PortingNumber_portingOrderId")
+ inverseAuthorizationLetter_portingOrderId AuthorizationLetter[] @relation("AuthorizationLetter_portingOrderId")
+ inverseCustomerServiceRecord_portingOrderId CustomerServiceRecord[] @relation("CustomerServiceRecord_portingOrderId")
+ inverseCarrierSubmission_portingOrderId CarrierSubmission[] @relation("CarrierSubmission_portingOrderId")
+ inverseCarrierRejection_portingOrderId CarrierRejection[] @relation("CarrierRejection_portingOrderId")
+ inverseFirmOrderCommitment_portingOrderId FirmOrderCommitment[] @relation("FirmOrderCommitment_portingOrderId")
+ inversePortActivation_portingOrderId PortActivation[] @relation("PortActivation_portingOrderId")
+ inversePortingException_portingOrderId PortingException[] @relation("PortingException_portingOrderId")
+ inverseOperationalTask_portingOrderId OperationalTask[] @relation("OperationalTask_portingOrderId")
+ inverseRuleVersion_portingOrderId RuleVersion[] @relation("RuleVersion_portingOrderId")
+ inverseDocumentRequirement_portingOrderId DocumentRequirement[] @relation("DocumentRequirement_portingOrderId")
+}
+
+model PortingNumber {
+ id String @id @default(cuid())
+ name String
+ telephoneNumber String
+ numberType String
+ serviceAddress String
+ accountReference String
+ status String @default("Draft")
+ portingOrderId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([portingOrderId])
+ linkedPortingOrderId PortingOrder @relation("PortingNumber_portingOrderId", fields: [portingOrderId], references: [id], onDelete: Restrict)
+ inversePortActivation_portingNumberId PortActivation[] @relation("PortActivation_portingNumberId")
+ inversePortingException_portingNumberId PortingException[] @relation("PortingException_portingNumberId")
+}
+
+model AuthorizationLetter {
+ id String @id @default(cuid())
+ title String
+ signedBy String
+ signedAt DateTime
+ customerName String
+ scope String
+ evidence String
+ status String @default("Draft")
+ portingOrderId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([portingOrderId])
+ linkedPortingOrderId PortingOrder @relation("AuthorizationLetter_portingOrderId", fields: [portingOrderId], references: [id], onDelete: Restrict)
+}
+
+model CustomerServiceRecord {
+ id String @id @default(cuid())
+ title String
+ carrier String
+ accountNumber String
+ billingName String
+ serviceAddress String
+ extractedAt DateTime
+ status String @default("Draft")
+ portingOrderId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([portingOrderId])
+ linkedPortingOrderId PortingOrder @relation("CustomerServiceRecord_portingOrderId", fields: [portingOrderId], references: [id], onDelete: Restrict)
+}
+
+model CarrierSubmission {
+ id String @id @default(cuid())
+ title String
+ submittedAt DateTime
+ carrier String
+ requestReference String
+ payloadReference String
+ receipt String?
+ status String @default("Draft")
+ portingOrderId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([portingOrderId])
+ linkedPortingOrderId PortingOrder @relation("CarrierSubmission_portingOrderId", fields: [portingOrderId], references: [id], onDelete: Restrict)
+ inverseCarrierRejection_carrierSubmissionId CarrierRejection[] @relation("CarrierRejection_carrierSubmissionId")
+}
+
+model CarrierRejection {
+ id String @id @default(cuid())
+ title String
+ carrierSubmissionId String
+ receivedAt DateTime
+ rejectionCode String
+ reason String
+ responseDueAt DateTime
+ status String @default("Draft")
+ portingOrderId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([portingOrderId])
+ linkedCarrierSubmissionId CarrierSubmission @relation("CarrierRejection_carrierSubmissionId", fields: [carrierSubmissionId], references: [id], onDelete: Restrict)
+ linkedPortingOrderId PortingOrder @relation("CarrierRejection_portingOrderId", fields: [portingOrderId], references: [id], onDelete: Restrict)
+}
+
+model FirmOrderCommitment {
+ id String @id @default(cuid())
+ title String
+ confirmedAt DateTime
+ activationAt DateTime
+ carrier String
+ confirmationReference String
+ timezone String
+ status String @default("Draft")
+ portingOrderId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([portingOrderId])
+ linkedPortingOrderId PortingOrder @relation("FirmOrderCommitment_portingOrderId", fields: [portingOrderId], references: [id], onDelete: Restrict)
+}
+
+model PortActivation {
+ id String @id @default(cuid())
+ title String
+ portingNumberId String
+ activatedAt DateTime
+ routingEvidence String
+ serviceTest String
+ receipt String
+ status String @default("Draft")
+ portingOrderId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([portingOrderId])
+ linkedPortingNumberId PortingNumber @relation("PortActivation_portingNumberId", fields: [portingNumberId], references: [id], onDelete: Restrict)
+ linkedPortingOrderId PortingOrder @relation("PortActivation_portingOrderId", fields: [portingOrderId], references: [id], onDelete: Restrict)
+}
+
+model PortingException {
+ id String @id @default(cuid())
+ title String
+ portingNumberId String
+ observedAt DateTime
+ issue String
+ owner String
+ action String
+ dueAt DateTime
+ status String @default("Draft")
+ portingOrderId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([portingOrderId])
+ linkedPortingNumberId PortingNumber @relation("PortingException_portingNumberId", fields: [portingNumberId], references: [id], onDelete: Restrict)
+ linkedPortingOrderId PortingOrder @relation("PortingException_portingOrderId", fields: [portingOrderId], references: [id], onDelete: Restrict)
+}
+
+model OperationalTask {
+ id String @id @default(cuid())
+ title String
+ owner String
+ priority String
+ startAt DateTime
+ dueAt DateTime
+ done Boolean
+ notes String?
+ status String @default("Draft")
+ portingOrderId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([portingOrderId])
+ linkedPortingOrderId PortingOrder @relation("OperationalTask_portingOrderId", fields: [portingOrderId], references: [id], onDelete: Restrict)
+}
+
+model RuleVersion {
+ id String @id @default(cuid())
+ title String
+ jurisdiction String
+ version String
+ effectiveAt DateTime
+ expiresAt DateTime?
+ sourceUrl String
+ requirementText String
+ status String @default("Draft")
+ portingOrderId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([portingOrderId])
+ linkedPortingOrderId PortingOrder @relation("RuleVersion_portingOrderId", fields: [portingOrderId], references: [id], onDelete: Restrict)
+}
+
+model DocumentRequirement {
+ id String @id @default(cuid())
+ title String
+ category String
+ requiredBy DateTime
+ sourceReference String
+ evidenceReference String?
+ reviewNotes String?
+ status String @default("Draft")
+ portingOrderId String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([createdAt])
+ @@index([portingOrderId])
+ linkedPortingOrderId PortingOrder @relation("DocumentRequirement_portingOrderId", fields: [portingOrderId], references: [id], onDelete: Restrict)
+}
