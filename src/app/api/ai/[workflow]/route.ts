@@ -10,6 +10,7 @@ import { errorResponse, jsonValue } from "@/lib/record-store";
 import { workflowContext } from "@/lib/workflow-context";
 import { parseModelResult } from "@/lib/ai-evidence";
 import { callOpenRouter, validateModel } from "@/lib/openrouter";
+import { deterministicFallback } from "@/lib/ai-fallback";
 export const dynamic = "force-dynamic";
 
 export async function POST(request: NextRequest, context: { params: Promise<{ workflow: string }> }) {
@@ -20,8 +21,11 @@ export async function POST(request: NextRequest, context: { params: Promise<{ wo
     if (!config) throw new RequestError("Unknown workflow", 404);
     const body = objectBody(await readJson(request));
     const input = validateAiInput(body.input, config.fields);
-    if (!process.env.OPENROUTER_API_KEY) throw new RequestError("AI is unavailable: configure the provider before running analysis. No assessment has been made.", 503);
     const evidence = await prisma.$transaction(tx => workflowContext(tx, body, input, workflow, user.id), { isolationLevel: Prisma.TransactionIsolationLevel.RepeatableRead });
+    if (!process.env.OPENROUTER_API_KEY) {
+      const fallback = deterministicFallback(config, evidence.rows, input);
+      return Response.json({ result: { ...fallback, id: null, model: "deterministic-fallback", contextRows: evidence.count, evidenceHash: evidence.hash, createdAt: new Date() } });
+    }
     if (workflow === "pr-draft") {
       const specifications = evidence.rows.filter(row => row.entity === "Specification");
       if (!specifications.length) throw new RequestError("Select an independently approved specification before drafting a pull request");

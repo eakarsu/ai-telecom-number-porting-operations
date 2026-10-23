@@ -131,7 +131,7 @@ function SidebarInner() {
             )}
           </div>
         </div>
-        <div className="space-y-1 border-t pt-3">{[["/calendar","Calendar"],["/reports","Reports & search"],["/tools","Calculations & connectors"],["/audit","Audit history"],["/users","Team accounts"],["/settings","AI settings"]].map(([href,title])=><Link key={href} href={href} className="flex items-center gap-2 rounded p-2 text-sm text-slate-600 hover:bg-rose-50"><Database className="h-4 w-4"/>{title}</Link>)}</div>
+        <div className="space-y-1 border-t pt-3">{[["/tasks","Staff tasks"],["/calendar","Calendar"],["/reports","Reports & search"],["/tools","Calculations & connectors"],["/audit","Audit history"],["/users","Team accounts"],["/settings","AI settings"]].map(([href,title])=><Link key={href} href={href} className="flex items-center gap-2 rounded p-2 text-sm text-slate-600 hover:bg-rose-50"><Database className="h-4 w-4"/>{title}</Link>)}</div>
       </nav>
       <div className="border-t border-slate-200 p-4 text-xs text-slate-400">
         {appConfig.tagline}
